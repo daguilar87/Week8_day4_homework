@@ -1,0 +1,25 @@
+{% block content %}
+
+
+
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+        <div class="card text-black shadow">
+          <div class="inner">
+            <img src="{{ p.image }}" class="card-img-top" alt="Sour Worms Shirt" />
+          </div>
+          <div class="card-body">
+            <div class="text-center">
+              <h2 class="card-title">{{ p.title }}</h2>
+            </div>
+            <div class="text-center">
+              <h4 class="card-title">{{ p.price }}</h4>
+              <h4 class="card-title">{{ p.description }}</h4>
+
+            </div>
+          </div>
+        </div>
+
+        {%endblock%}
