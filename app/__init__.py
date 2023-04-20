@@ -1,5 +1,6 @@
 
 from flask import Flask
+from .payments.routes import payments
 
 from config import Config
 
@@ -12,6 +13,7 @@ app = Flask(__name__)
 
 cors = CORS(app, resources={r"/shop/<productid>*": {"origins": "*"}})
 cors = CORS(app, resources={r"/shop*": {"origins": "*"}})
+cors = CORS(app, origins=['http://localhost:3000'])
 
 
 app.config.from_object(Config)
@@ -20,3 +22,5 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 from . import routes 
+
+app.register_blueprint(payments)
