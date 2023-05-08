@@ -6,6 +6,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash
 
 
 
+
 @app.route('/')
 def gatherInfo():
     for y in range(10,21):
