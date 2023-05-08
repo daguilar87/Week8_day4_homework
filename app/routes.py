@@ -9,10 +9,10 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash
 
 @app.route('/')
 def gatherInfo():
-    for y in range(10,21):
-        x = Products(y)
-        p = Product(title=x['title'],price=x['price'],description=x['description'],image=x['image'])
-        p.saveProduct()
+    # for y in range(10,21):
+    #     x = Products(y)
+    #     p = Product(title=x['title'],price=x['price'],description=x['description'],image=x['image'])
+    #     p.saveProduct()
     return render_template('index.html')
 
 
